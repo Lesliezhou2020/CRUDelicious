@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Index</title>
+        <link rel="stylesheet" href="~/css/style.css"/>
+    </head>
+    <body>
+        <h1>Add a new Dish!</h1>
+        <a href="/">Home</a>
+        <form action="/new" method="post">
+            <label>Chef's Name:</label>
+            <input type="text" name="Chef">
+            <label>Name of Dish:</label>
+            <input type="text" name="Name">
+            <label># of Calories:</label>
+            <input type="text" name="Calories">
+            <label>Tastiness:</label>
+            <select name="Tastiness">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <label>Description:</label>
+            <input type="text" name="Description">
+
+            <input type="submit" value="Add Dish">
+            
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,22 @@
+@using Delicious.Models
+@model List<Dish>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Index</title>
+        <link rel="stylesheet" href="~/css/style.css"/>
+    </head>
+    <body>
+        <h1>Welcome to CRUDelicious</h1>
+        <h2>Check out some recent dishes!</h2>
+        <a href="/new">Add a Dish</a>
+        <div>
+            @foreach (Dish item in Model)
+            {
+                <p><a href="/@item.DishId">@item.Name</a> by @item.Chef</p>
+            }
+        </div>
+    </body>
+</html>

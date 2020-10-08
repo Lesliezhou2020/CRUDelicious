@@ -1,0 +1,36 @@
+@using Delicious.Models
+@model Dish
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Index</title>
+        <link rel="stylesheet" href="~/css/style.css"/>
+    </head>
+    <body>
+        <h1>Edit @Model.Name</h1>
+        <a href="/">Home</a>
+        <form action="/edit/@Model.DishId" method="post">
+            <label>Chef's Name:</label>
+            <input type="text" name="Chef" value="@Model.Chef">
+            <label>Name of Dish:</label>
+            <input type="text" name="Name" value="@Model.Name">
+            <label># of Calories:</label>
+            <input type="text" name="Calories" value="@Model.Calories">
+            <label>Tastiness:</label>
+            <select name="Tastiness">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <label>Description:</label>
+            <input type="text" name="Description" value="@Model.Description">
+
+            <input type="submit" value="Edit Dish">
+            
+        </form>
+        
+    </body>
+</html>
